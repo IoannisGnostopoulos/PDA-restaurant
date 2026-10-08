@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8" />
+<title>Εισαγωγή Χρήστη</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    background-color: #DCDCDC;
+    font-size: 12pt;
+    padding-left: 50px;
+    color: #000000;
+    width: 1180px;
+    line-height: 25px;
+    font-family: Arial, sans-serif;
+}
+
+#log {
+    position: relative;
+    color: black;
+    top: 30px;
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+
+#tab {
+    position: relative;
+    top: 50px;
+}
+
+#rol {
+    position: relative;
+    top: -150px;
+    left: 600px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="log">
+    <h4>Εισαγωγή χρήστη</h4>
+</div>
+
+<form method="POST" action="php_insert.php">
+    <table id="tab" cellpadding="5">
+        <tr>
+            <td>Όνομα: <input type="text" name="name" maxlength="20" size="20" pattern="[a-zA-Z\u0370-\u03FF\u1F00-\u1FFF\s]+" required autofocus></td>
+            <td>Επίθετο: <input type="text" name="surname" maxlength="20" size="20" pattern="[a-zA-Z\u0370-\u03FF\u1F00-\u1FFF\s]+" required></td>
+        </tr>
+        <tr>
+            <td>Username: <input type="text" name="username" maxlength="20" size="20" required></td>
+            <td>Password: <input type="password" name="password" maxlength="20" size="20" title="max 20 characters" required></td>
+        </tr>
+        <tr>
+            <td>Κωδικός χρήστη: <input type="text" name="usercode" maxlength="5" size="20" pattern="[0-9]+" required></td>
+            <td>
+                Ανάθεση ρόλου:
+                <select name="rolecode" required>
+                    <option value="1">1 - Ιδιοκτήτης</option>
+                    <option value="2">2 - Σερβιτόρος</option>
+                    <option value="3">3 - Κουζίνα</option>
+                    <option value="4">4 - Μάρκα</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Εισαγωγή"></td>
+            <td><input type="reset" value="Καθαρισμός"></td>
+        </tr>
+    </table>
+</form>
+
+<table id="rol" border="1" cellpadding="3">
+    <tr>
+        <th>Κωδικός ρόλου</th>
+        <th>Όνομα ρόλου</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Ιδιοκτήτης</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Σερβιτόρος</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Κουζίνα</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Μάρκα</td>
+    </tr>
+</table>
+
+<br>
+<a href="owner.html" style="color: blue;">BACK</a>
+
+</body>
+</html>
